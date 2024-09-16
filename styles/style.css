@@ -1,0 +1,46 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.Header{
+    width: 25rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+    margin: 0 auto;
+}
+
+.Header_burcon{
+    height: 50%;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+   img{
+    cursor: pointer;
+    
+   }
+   img + img{
+    cursor: none;
+   }
+
+}
+
+.Header_nav{
+   display: none;
+}
+.Header_select{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    
+}
+.Header_select img {
+    width: 1.8rem;
+    cursor: pointer;
+}

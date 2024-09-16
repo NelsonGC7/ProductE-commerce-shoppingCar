@@ -3,6 +3,10 @@
     margin: 0;
     box-sizing: border-box;
 }
+body{
+    width: 100%;
+    height: 100vh;
+}
 .Header{
     width: 25rem;
     height: 5rem;
@@ -12,7 +16,6 @@
     
     margin: 0 auto;
 }
-
 .Header_burcon{
     height: 50%;
     display: flex;
@@ -27,7 +30,6 @@
    }
 
 }
-
 .Header_nav{
    display: none;
 }
@@ -43,4 +45,33 @@
 .Header_select img {
     width: 1.8rem;
     cursor: pointer;
+}
+
+.Contenedor{
+    width: 25rem;
+    height: 40%;
+}
+.Imgmenu{
+    background-color: orange;
+    height: 100%;
+    position: relative;
+    max-width: 25rem;
+}
+.Imgmenu button{
+    position: absolute;
+    height: 3rem;
+    width: 3rem;
+    border: none;
+    border-radius: 50%;
+    bottom: 41.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.Imgmenu-prev{
+    left: 7px;
+}
+.Imgmenu-next{
+    right: 7px;
 }

@@ -13,7 +13,9 @@ const elements = {
     btones: document.querySelector('.Textcontein_btons-btons'),
     param: document.querySelector('.Textcontein_btons-info'),
     carritoC: document.querySelector('.toltipCar'),
-    toltip:document.querySelector('.toltipCar_content')
+    toltip:document.querySelector('.toltipCar_content'),
+    imgContein: document.querySelector('.Imgmenu_ruleta div'),
+    images: document.querySelectorAll('.Imgmenu_ruleta div img')
 }
 const components = {
     nav: 
@@ -81,6 +83,9 @@ btns.restar.addEventListener('click',()=>{
 })
 let newContador = null;
 let valoAn = null;
+let elementos = elements.images.length;
+let cuenta  =  1;
+let carrusel = null 
 btns.add.addEventListener('click',()=>{
     if(contador === 1) return;
     if(!inicial) return;
@@ -104,7 +109,7 @@ btns.add.addEventListener('click',()=>{
   
     if(!valoAn){
         valoAn = Number(contador);
-    }
+    }  
 
     elements.toltip.insertAdjacentHTML('beforeend',component)
     document.querySelector('.Header_select_car div').classList.add('BURBUJA_active')
@@ -128,4 +133,20 @@ btns.add.addEventListener('click',()=>{
    }
     document.querySelector('.Header_select_car div').innerText = newContador
 
+})
+btns.next.addEventListener('click', ()=>{
+    if(cuenta === elements.images.length) return;
+    const transtale =  Number(cuenta) * 400;
+    carrusel = transtale
+    elements.imgContein.style.transform = `translateX(-${transtale}px)`
+    cuenta += 1;
+})
+btns.prev.addEventListener('click',()=>{
+    if(cuenta > elements.images.length || cuenta === 1)return;
+    console.log(carrusel)
+    let  transt  = Number(carrusel) - 400;
+    carrusel = transt
+    console.log(carrusel)
+    elements.imgContein.style.transform = `translateX(-${transt}px)`
+    cuenta -= 1;
 })

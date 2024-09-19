@@ -150,3 +150,15 @@ btns.prev.addEventListener('click',()=>{
     elements.imgContein.style.transform = `translateX(-${transt}px)`
     cuenta -= 1;
 })
+
+const imgBtons = document.querySelectorAll('.Imgmenu_preview img');
+
+
+console.log(imgBtons.forEach(data=>{
+    data.addEventListener('click',()=>{
+        const src = data.src
+         elements.images[0].src = src
+    })
+
+
+} ))
